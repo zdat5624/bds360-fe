@@ -1,0 +1,13 @@
+/* @/styles/antd-overrides.css */
+
+.custom-table .ant-table-container {
+  border: 1px solid var(--table-border-color);
+  /* border-radius: 2px; */
+  overflow: hidden;
+  box-shadow: none;
+}
+
+/* Tabs custom underline */
+.ant-tabs-nav-list {
+  border-bottom: 1px solid var(--tabs-border-color);
+}

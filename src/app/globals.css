@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BÍ KÍP CHỐNG XUNG ĐỘT TAILWIND VÀ ANTD */
+@layer base {
+  /* Ngăn Tailwind vô hiệu hóa màu nền của Button AntD */
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+    @apply bg-transparent;
+  }
+
+  /* Khôi phục màu cho class ant-btn */
+  .ant-btn {
+    @apply bg-transparent;
+  }
+  .ant-btn-primary {
+    @apply bg-blue-600 !important; /* Dùng màu xanh chuẩn của dự án hoặc Tailwind */
+  }
+
+}
+
+/* =========================================================
+   SCROLLBAR GLOBAL (Áp dụng cho toàn bộ website)
+========================================================= */
+
+/* 1. Kích thước thanh cuộn */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* 🌟 2. TẮT MŨI TÊN 2 ĐẦU TRÊN TOÀN BỘ WEBSITE */
+::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* 3. Màu nền của rãnh cuộn */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 4. Cục kéo (Thumb) */
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.25);
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.45);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.35) transparent;
+}

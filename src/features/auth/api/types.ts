@@ -1,0 +1,41 @@
+// @/features/auth/api/types.ts
+
+import { Gender } from '@/constants';
+import { User } from '@/types';
+
+export interface LoginPayload {
+    username: string; // Trong Spring Boot đang dùng field name là username
+    password: string;
+}
+
+export interface GoogleLoginPayload {
+    token: string; // Đây là ID Token nhận được từ Google SDK
+}
+
+export interface AuthResponse {
+    accessToken: string;
+    user: User;
+}
+
+export interface RegisterPayload {
+    name: string;
+    email: string;
+    password: string;
+    phone: string;
+    gender: Gender;
+}
+
+export interface ForgotPasswordPayload {
+    email: string;
+}
+
+export interface ResetPasswordPayload {
+    email: string;
+    code: string;
+    newPassword: string;
+}
+
+export interface ChangePasswordPayload {
+    currentPassword: string;
+    newPassword: string;
+}

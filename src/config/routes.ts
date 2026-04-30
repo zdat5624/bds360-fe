@@ -57,6 +57,7 @@ export const APP_ROUTES = {
 
     // 5. ERROR ROUTES
     ERRORS: {
-        FORBIDDEN: 'errors/forbidden',
+        FORBIDDEN: '403',
+        INTERNAL_SERVER_ERROR: '500',
     },
 } as const;

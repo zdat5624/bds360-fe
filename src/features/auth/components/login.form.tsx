@@ -41,7 +41,7 @@ export function LoginForm() {
                 setAuth(data.user, data.accessToken);
                 message.success('Đăng nhập thành công!');
 
-                await new Promise((resolve) => setTimeout(resolve, 5000));
+                await new Promise((resolve) => setTimeout(resolve, 250));
                 router.push(APP_ROUTES.USER.DASH_BOARD);
             },
         });
